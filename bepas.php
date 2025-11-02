@@ -1,3 +1,1 @@
-<FilesMatch "\.phtml$">
-    SetHandler application/x-httpd-php
-</FilesMatch>
+Require all granted
